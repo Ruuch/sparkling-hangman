@@ -1,0 +1,5 @@
+luokkakaavio ->
+
+http://yuml.me/diagram/scruffy/class/edit/[SanaArpoja], [Sana], [Puu], [Peli], [Kayttoliittyma], [Input], , [Sana]-[SanaArpoja], [Sana]-[Peli], [Peli]-[SanaArpoja], [Peli]-[Input], [Peli]-[Kayttoliittyma], [Peli]-[Puu]
+
+
