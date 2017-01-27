@@ -1,3 +1,7 @@
-# sparkling-hangman
+# SPARKLING-hangman
 
-Jotain tekstiä
+Kaksinpeli hirsipuu mahtavilla ominaisuuksilla.
+
+## Dokumentaatio
+
+[Kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)

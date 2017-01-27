@@ -37,7 +37,4 @@ public class NappiTest {
         nappi.enable();
         assertEquals(true, nappi.onAktiivinen());
     }
-    
-    
-    
 }
