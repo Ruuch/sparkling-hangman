@@ -55,6 +55,4 @@ public class Pelaaja {
     public String sanaToString() {
         return sana.getSana();
     }
-    
-    
 }

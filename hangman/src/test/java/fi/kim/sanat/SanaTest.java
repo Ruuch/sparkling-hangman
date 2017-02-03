@@ -41,6 +41,18 @@ public class SanaTest {
     }
     
     @Test
+    public void arvaaminenToimii() {
+        sana.arvaa('o');
+        assertEquals(true, sana.getArvatutKirjaimet()[1]);
+    }
+    
+    @Test
+    public void sanaPiilotetuillaKirjaimillaToimii() {
+        sana.arvaa('o');
+        assertEquals("_.o._", sana.sanaPiilotetuillaKirjaimilla());
+    }
+    
+    @Test
     public void kaytaVinkkiKayttaaVinkin() {
         sana.kaytaVinkki();
         
