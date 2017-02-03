@@ -1,5 +1,6 @@
 package fi.kim.pelaajat;
 
+import fi.kim.sanat.SanaArpoja;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,8 +20,8 @@ public class PelaajaTest {
     }
 
     @Before
-    public void setUp() {
-        pelaaja = new Pelaaja();
+    public void setUp() throws Exception {
+        pelaaja = new Pelaaja(new SanaArpoja());
     }
 
     @Test
@@ -30,9 +31,9 @@ public class PelaajaTest {
 
     @Test
     public void lisaaPisteLisaaPisteen() {
-        pelaaja.lisaaPiste();
+        pelaaja.sanaOikein();
 
-        assertEquals(1, pelaaja.getPisteet());
+        assertEquals(2, pelaaja.getPisteet());
     }
 
 }
