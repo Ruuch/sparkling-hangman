@@ -16,6 +16,10 @@ public class Sana {
         arvatutKirjaimet = new boolean[sana.length()];
     }
     
+    /**
+     * Arpoo uuden sanan.
+     * @param arpoja Arpoja jota käytetään arpomiseen.
+     */
     public void uusiSana(SanaArpoja arpoja) {
         sana = arpoja.arvoSana();
         this.vinkkiKayttamatta = true;
@@ -33,6 +37,10 @@ public class Sana {
         return arvatutKirjaimet;
     }
     
+    /**
+     * Palauttaa merkkijonon jossa arvattavasta sanasta on näkyvillä vain ne 
+     * kirjaimet, jotka on jo arvattu.
+     */
     public String sanaPiilotetuillaKirjaimilla() {
         String palautettava = "";
         int i = 0;
@@ -52,6 +60,9 @@ public class Sana {
         return palautettava;
     }
     
+    /**
+     * Arvaa kirjaimen.
+     */
     public boolean arvaa(char kirjain) {
         int i = 0;
         boolean oikeinArvattu = false;
@@ -67,6 +78,9 @@ public class Sana {
         return oikeinArvattu;
     }
     
+    /**
+     * Tarkistaa onko kaikki sanan kirjaimet jo arvattu.
+     */
     public boolean kaikkiKirjaimetArvattu() {
         boolean voitto = true;
         for (boolean b : arvatutKirjaimet) {

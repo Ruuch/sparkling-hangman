@@ -8,4 +8,4 @@
 - Menun navigoiminen (kenties pelin sääntöihin liittyviä asetuksia tai AI:n vaikeustason säätelyä).
 - Pelaaminen
 
-![Luokkakaavio](kaavio2.png)
+![Luokkakaavio](kaavio.png)

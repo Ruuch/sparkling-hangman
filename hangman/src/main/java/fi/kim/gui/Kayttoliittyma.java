@@ -8,7 +8,7 @@ import fi.kim.pelaajat.Pelaaja;
  */
 public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
     /**
-     * Creates new form Kayttoliittyma
+     * Ohjelman visuaalinen käyttöliittymä.
      */
     public Kayttoliittyma() {
         initComponents();
@@ -77,10 +77,18 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
         setVisible(true);
     }
     
+    /**
+     * Lisää ActionListenerin ArvausNapille.
+     * @param pelaaja Pelaaja, jonka sanaa muokataan.
+     */
     public void lisaaKuuntelija(Pelaaja pelaaja) {
         arvausNappi.addActionListener(new ArvausKuuntelija(arvausKentta, pelaaja, arvattavaSana));
     }
     
+    /**
+     * Metodi asettaa parametrina saaneeen merkkijonon arvattavaSana laatikkoon.
+     * @param sana Merkkijono joka laitetaan laatikkoon.
+     */
     public void setArvattavaSanaKentta(String sana) {
         arvattavaSana.setText(sana);
     }

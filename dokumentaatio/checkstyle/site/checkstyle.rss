@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 6,
+      <title>File: 7,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -74,7 +74,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#fi.kim.gui.Nappi.java">fi/kim/gui/Nappi.java</a>
+                  <a href="${project.url}/checkstyle.html#fi.kim.gui.Kayttoliittyma.java">fi/kim/gui/Kayttoliittyma.java</a>
                 </td>
                 <td>
                   0
@@ -103,6 +103,20 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#fi.kim.logiikka.Pelilogiikka.java">fi/kim/logiikka/Pelilogiikka.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#fi.kim.gui.ArvausKuuntelija.java">fi/kim/gui/ArvausKuuntelija.java</a>
                 </td>
                 <td>
                   0

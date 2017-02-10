@@ -22,11 +22,17 @@ public class SanaArpoja {
         lueSanatListaan();
     }
 
+    /**
+     * Arpoo uuden sanan listalta ja palauttaa sen merkkijonona.
+     */
     public String arvoSana() {
         Random random = new Random();
         return sanat.get(random.nextInt(sanat.size() - 1)); //arpoo numeron väliltä 0-listan pituus, ja palauttaa 
     }                                                       //merkkijonon joka on listassa numeron osoittamalla sijainnilla
 
+    /**
+     * Lukee sanat tekstitiedostosta ja lisää ne listaan.
+     */
     private void lueSanatListaan()  {
 
         String merkkijono = "";

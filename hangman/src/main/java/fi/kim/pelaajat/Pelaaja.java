@@ -21,6 +21,10 @@ public class Pelaaja {
         sana = new Sana(arpoja.arvoSana());
     }
     
+    /**
+     * Arvaa kirjain ja muuta sanan boolean taulukkoa jos oikein.
+     * @param kirjain Arvaus.
+     */
     public void arvaa(char kirjain) {
         if (!sana.arvaa(kirjain)) {
             virheArvauksia++;
@@ -30,6 +34,9 @@ public class Pelaaja {
         }
     }
     
+    /**
+     * Kutsuu sanan uusiSana metodia.
+     */
     public void uusiSana() {
         sana.uusiSana(arpoja);
         virheArvauksia = 0;

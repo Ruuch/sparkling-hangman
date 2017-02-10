@@ -7,8 +7,7 @@ import fi.kim.sanat.SanaArpoja;
 import javax.swing.SwingUtilities;
 
 /**
- *
- * @author sepkim
+ * Hoitaa valtaosan pelin varsinaisesta suorituksesta ja etenemisestä.
  */
 public class Pelilogiikka {
 
@@ -22,6 +21,10 @@ public class Pelilogiikka {
         this.pelaaja1 = new Pelaaja(arpoja);
     }
 
+    
+    /**
+     * Metodi kaynnistaa ohjelman ja kutsuu käyttöliittymää.
+     */
     public void kaynnista() {
         
         System.out.println("arvattava sana on: " + pelaaja1.sanaToString());
@@ -32,6 +35,10 @@ public class Pelilogiikka {
         
     }
     
+    /**
+     * alustaa UI elementtejä joita generoitu 
+     * Kayttoliittyma luokka ei anna muokata.
+     */
     public void luoUI() {
         SwingUtilities.invokeLater(kayttoliittyma);
         kayttoliittyma.lisaaKuuntelija(pelaaja1);

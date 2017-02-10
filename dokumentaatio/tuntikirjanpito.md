@@ -6,3 +6,4 @@
 | 27.01.2017 | 6h | Logiikan ja testien koodausta, pit ja maven raportit |
 | 02.02.2017 | 2h | Sananarvaustoteutuksen suunnittelua ja ohjelmointia |
 | 03.02.2017 | 3h | Sananarvaus- sekä sanantulostus ohjelmointi, raportit yms |
+| 10.02.2017 | 5h | Käyttöliittymän alkeita ja javadoc + raportit |
