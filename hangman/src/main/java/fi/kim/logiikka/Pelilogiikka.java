@@ -1,8 +1,10 @@
 package fi.kim.logiikka;
 
+import fi.kim.gui.Kayttoliittyma;
 import fi.kim.pelaajat.Pelaaja;
 import fi.kim.sanat.Sana;
 import fi.kim.sanat.SanaArpoja;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -10,19 +12,29 @@ import fi.kim.sanat.SanaArpoja;
  */
 public class Pelilogiikka {
 
-    SanaArpoja arpoja;
+    private SanaArpoja arpoja;
+    private Kayttoliittyma kayttoliittyma;
+    private Pelaaja pelaaja1;
 
     public Pelilogiikka() throws Exception {
         arpoja = new SanaArpoja();
+        this.kayttoliittyma = new Kayttoliittyma();
+        this.pelaaja1 = new Pelaaja(arpoja);
     }
 
     public void kaynnista() {
-        Pelaaja pelaaja1 = new Pelaaja(arpoja);
         
         System.out.println("arvattava sana on: " + pelaaja1.sanaToString());
-        pelaaja1.arvaa('a');
-        pelaaja1.arvaa('e');
-        pelaaja1.arvaa('o');
-        System.out.println(pelaaja1.getSana().sanaPiilotetuillaKirjaimilla());
+        
+        luoUI();
+        
+        
+        
+    }
+    
+    public void luoUI() {
+        SwingUtilities.invokeLater(kayttoliittyma);
+        kayttoliittyma.lisaaKuuntelija(pelaaja1);
+        kayttoliittyma.setArvattavaSanaKentta(pelaaja1.getSana().sanaPiilotetuillaKirjaimilla());
     }
 }
