@@ -27,12 +27,23 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
         arvattavaSana = new javax.swing.JLabel();
         arvausKentta = new javax.swing.JTextField();
         arvausNappi = new javax.swing.JButton();
+        vaariaArvauksia = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         arvattavaSana.setText("jLabel1");
 
         arvausNappi.setText("Arvaa");
+        arvausNappi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arvausNappiActionPerformed(evt);
+            }
+        });
+
+        vaariaArvauksia.setText("0");
+
+        jLabel1.setText("Vääriä arvauksia: ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -40,17 +51,27 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(86, 86, 86)
-                .addComponent(arvattavaSana, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(arvausKentta, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(arvausNappi, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(arvattavaSana, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(arvausKentta, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(arvausNappi, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(5, 5, 5)
+                        .addComponent(vaariaArvauksia)))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(216, Short.MAX_VALUE)
+                .addContainerGap(156, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(vaariaArvauksia)
+                    .addComponent(jLabel1))
+                .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(arvattavaSana, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(arvausKentta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -61,6 +82,10 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void arvausNappiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arvausNappiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arvausNappiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -69,6 +94,8 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
     private javax.swing.JLabel arvattavaSana;
     private javax.swing.JTextField arvausKentta;
     private javax.swing.JButton arvausNappi;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel vaariaArvauksia;
     // End of variables declaration//GEN-END:variables
 
     @Override
@@ -82,7 +109,7 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
      * @param pelaaja Pelaaja, jonka sanaa muokataan.
      */
     public void lisaaKuuntelija(Pelaaja pelaaja) {
-        arvausNappi.addActionListener(new ArvausKuuntelija(arvausKentta, pelaaja, arvattavaSana));
+        arvausNappi.addActionListener(new ArvausKuuntelija(arvausKentta, pelaaja, arvattavaSana, vaariaArvauksia));
     }
     
     /**
@@ -91,6 +118,10 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
      */
     public void setArvattavaSanaKentta(String sana) {
         arvattavaSana.setText(sana);
+    }
+    
+    public void setVaariaArvauksia(int luku) {
+        vaariaArvauksia.setText(Integer.toString(luku));
     }
 
 }

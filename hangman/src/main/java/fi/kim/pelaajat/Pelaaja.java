@@ -28,9 +28,9 @@ public class Pelaaja {
     public void arvaa(char kirjain) {
         if (!sana.arvaa(kirjain)) {
             virheArvauksia++;
-            if (virheArvauksia >= 9) {
-                sanaVaarin();
-            }
+//            if (virheArvauksia >= 9) {
+//                sanaVaarin();
+//            }
         }
     }
     
@@ -50,16 +50,22 @@ public class Pelaaja {
         return pisteet;
     }
     
-    public void sanaOikein() {
-        this.pisteet += 2;
-    }
-    
-    public void sanaVaarin() {
-        this.pisteet -= 1;
-        uusiSana();
-    }
+//    public void sanaOikein() {
+//        this.pisteet += 2;
+//    }
+//    
+//    public void sanaVaarin() {
+//        this.pisteet -= 1;
+//        uusiSana();
+//    }
     
     public String sanaToString() {
         return sana.getSana();
     }
+
+    public int getVirheArvauksia() {
+        return virheArvauksia;
+    }
+    
+    
 }
