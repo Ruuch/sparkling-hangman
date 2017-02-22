@@ -1,6 +1,7 @@
 package fi.kim.gui;
 
 import fi.kim.pelaajat.Pelaaja;
+import javax.swing.JLabel;
 
 /**
  *
@@ -29,10 +30,29 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
         arvausNappi = new javax.swing.JButton();
         vaariaArvauksia = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        Otsikko = new javax.swing.JLabel();
+        puu1 = new javax.swing.JLabel();
+        puu2 = new javax.swing.JLabel();
+        puu3 = new javax.swing.JLabel();
+        puu4 = new javax.swing.JLabel();
+        puu6 = new javax.swing.JLabel();
+        puu5 = new javax.swing.JLabel();
+        puu7 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setMinimumSize(new java.awt.Dimension(415, 300));
+        setSize(new java.awt.Dimension(0, 0));
+        getContentPane().setLayout(null);
 
+        arvattavaSana.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         arvattavaSana.setText("jLabel1");
+        arvattavaSana.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(arvattavaSana);
+        arvattavaSana.setBounds(86, 218, 143, 24);
+        getContentPane().add(arvausKentta);
+        arvausKentta.setBounds(252, 218, 25, 25);
 
         arvausNappi.setText("Arvaa");
         arvausNappi.addActionListener(new java.awt.event.ActionListener() {
@@ -40,47 +60,81 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
                 arvausNappiActionPerformed(evt);
             }
         });
+        getContentPane().add(arvausNappi);
+        arvausNappi.setBounds(283, 216, 78, 29);
 
+        vaariaArvauksia.setBackground(new java.awt.Color(254, 254, 254));
+        vaariaArvauksia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         vaariaArvauksia.setText("0");
+        vaariaArvauksia.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(vaariaArvauksia);
+        vaariaArvauksia.setBounds(200, 150, 20, 30);
 
         jLabel1.setText("Vääriä arvauksia: ");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(60, 150, 150, 30);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(arvattavaSana, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(arvausKentta, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(arvausNappi, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(5, 5, 5)
-                        .addComponent(vaariaArvauksia)))
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(156, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(vaariaArvauksia)
-                    .addComponent(jLabel1))
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(arvattavaSana, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(arvausKentta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(arvausNappi))
-                .addGap(55, 55, 55))
-        );
+        Otsikko.setFont(new java.awt.Font("Noto Sans", 3, 18)); // NOI18N
+        Otsikko.setText("Hirsipuu");
+        Otsikko.setBorder(new javax.swing.border.MatteBorder(null));
+        getContentPane().add(Otsikko);
+        Otsikko.setBounds(12, 12, 90, 24);
 
-        pack();
-    }// </editor-fold>//GEN-END:initComponents
+        puu1.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
+        puu1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        puu1.setText("/-------\\");
+            getContentPane().add(puu1);
+            puu1.setBounds(250, 150, 70, 17);
+
+            puu2.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
+            puu2.setText("|");
+            getContentPane().add(puu2);
+            puu2.setBounds(281, 131, 5, 17);
+
+            puu3.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
+            puu3.setText("|");
+            getContentPane().add(puu3);
+            puu3.setBounds(281, 108, 5, 17);
+
+            puu4.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
+            puu4.setText("|");
+            getContentPane().add(puu4);
+            puu4.setBounds(281, 84, 5, 17);
+
+            puu6.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
+            puu6.setText("|");
+            getContentPane().add(puu6);
+            puu6.setBounds(320, 80, 21, 26);
+
+            puu5.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
+            puu5.setText("_ _ _ ");
+            getContentPane().add(puu5);
+            puu5.setBounds(287, 67, 36, 17);
+
+            puu7.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
+            puu7.setText("x.x");
+            getContentPane().add(puu7);
+            puu7.setBounds(310, 100, 30, 17);
+
+            jPanel1.setBackground(new java.awt.Color(254, 254, 254));
+            jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+            javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+            jPanel1.setLayout(jPanel1Layout);
+            jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 106, Short.MAX_VALUE)
+            );
+            jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(0, 116, Short.MAX_VALUE)
+            );
+
+            getContentPane().add(jPanel1);
+            jPanel1.setBounds(240, 60, 110, 120);
+
+            pack();
+        }// </editor-fold>//GEN-END:initComponents
 
     private void arvausNappiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arvausNappiActionPerformed
         // TODO add your handling code here:
@@ -91,10 +145,19 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Otsikko;
     private javax.swing.JLabel arvattavaSana;
     private javax.swing.JTextField arvausKentta;
     private javax.swing.JButton arvausNappi;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel puu1;
+    private javax.swing.JLabel puu2;
+    private javax.swing.JLabel puu3;
+    private javax.swing.JLabel puu4;
+    private javax.swing.JLabel puu5;
+    private javax.swing.JLabel puu6;
+    private javax.swing.JLabel puu7;
     private javax.swing.JLabel vaariaArvauksia;
     // End of variables declaration//GEN-END:variables
 
@@ -109,7 +172,9 @@ public class Kayttoliittyma extends javax.swing.JFrame implements Runnable {
      * @param pelaaja Pelaaja, jonka sanaa muokataan.
      */
     public void lisaaKuuntelija(Pelaaja pelaaja) {
-        arvausNappi.addActionListener(new ArvausKuuntelija(arvausKentta, pelaaja, arvattavaSana, vaariaArvauksia));
+        JLabel[] puut = {puu1, puu2, puu3, puu4, puu5, puu6, puu7};
+        Puu puu = new Puu(puut);
+        arvausNappi.addActionListener(new ArvausKuuntelija(arvausKentta, pelaaja, arvattavaSana, vaariaArvauksia, puu, arvausNappi));
     }
     
     /**

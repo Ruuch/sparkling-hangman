@@ -25,13 +25,15 @@ public class Pelaaja {
      * Arvaa kirjain ja muuta sanan boolean taulukkoa jos oikein.
      * @param kirjain Arvaus.
      */
-    public void arvaa(char kirjain) {
+    public boolean arvaa(char kirjain) {
         if (!sana.arvaa(kirjain)) {
             virheArvauksia++;
+            return false;
 //            if (virheArvauksia >= 9) {
 //                sanaVaarin();
 //            }
         }
+        return true;
     }
     
     /**
