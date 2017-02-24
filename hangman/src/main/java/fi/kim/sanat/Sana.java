@@ -1,7 +1,7 @@
 package fi.kim.sanat;
 
 /**
- *
+ * Luokka pitää kirjaa arvattavasta sanasta.
  * @author sepkim
  */
 public class Sana {
@@ -10,6 +10,10 @@ public class Sana {
     private boolean vinkkiKayttamatta;
     private boolean[] arvatutKirjaimet;
     
+    /**
+     * Konstruktori alustaa tarvittavat muuttujat.
+     * @param sana 
+     */
     public Sana(String sana) {
         this.sana = sana;
         this.vinkkiKayttamatta = true;
@@ -25,10 +29,17 @@ public class Sana {
         this.vinkkiKayttamatta = true;
     }
     
+    /**
+     * Käyttää vinkin.
+     */
     public void kaytaVinkki() {
         this.vinkkiKayttamatta = false;
     }
     
+    /**
+     * Tarkistaa vinkin tilan.
+     * @return Palauttaa true jos vinkki on käyttämättä.
+     */
     public boolean vinkkiKayttamatta() {
         return vinkkiKayttamatta;
     }
@@ -40,6 +51,7 @@ public class Sana {
     /**
      * Palauttaa merkkijonon jossa arvattavasta sanasta on näkyvillä vain ne 
      * kirjaimet, jotka on jo arvattu.
+     * @return Palauttaa sanan siten että arvaamattomat kirjaimet ovat piilossa.
      */
     public String sanaPiilotetuillaKirjaimilla() {
         String palautettava = "";
@@ -62,6 +74,8 @@ public class Sana {
     
     /**
      * Arvaa kirjaimen.
+     * @return Palauttaa true jos arvaus oli oikein.
+     * @param kirjain Kirjain jota pelaaja arvaa.
      */
     public boolean arvaa(char kirjain) {
         int i = 0;
@@ -80,6 +94,7 @@ public class Sana {
     
     /**
      * Tarkistaa onko kaikki sanan kirjaimet jo arvattu.
+     * @return palauttaa true jos kaikki kirjaimet on arvattu.
      */
     public boolean kaikkiKirjaimetArvattu() {
         boolean voitto = true;

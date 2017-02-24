@@ -34,9 +34,9 @@ public class SanaArpojaTest {
     
     @Test
     public void listastaLoytyyOikeitaSanoja() {
-        assertEquals(true, sanaArpoja.getSanat().contains("moi"));
-        assertEquals(true, sanaArpoja.getSanat().contains("hei"));
-        assertEquals(true, sanaArpoja.getSanat().contains("moikkelis"));
+        assertEquals(true, sanaArpoja.getSanat().contains("mursu"));
+        assertEquals(true, sanaArpoja.getSanat().contains("vene"));
+        assertEquals(true, sanaArpoja.getSanat().contains("auto"));
     }
     
     @Test

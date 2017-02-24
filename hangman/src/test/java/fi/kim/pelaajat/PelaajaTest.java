@@ -29,20 +29,6 @@ public class PelaajaTest {
     public void pelaajaAlussaOikein() {
         assertEquals(0, pelaaja.getPisteet());
     }
-
-    @Test
-    public void sanaOikeinLisaaPisteet() {
-        pelaaja.sanaOikein();
-
-        assertEquals(2, pelaaja.getPisteet());
-    }
-    
-    @Test
-    public void sanaVaarinVahentaaPisteen() {
-        pelaaja.sanaVaarin();
-
-        assertEquals(-1, pelaaja.getPisteet());
-    }
     
     @Test
     public void uusiSanaArpooUudenSana() {      //testi epäonnistuu n. 10% todennäköisyydellä, 

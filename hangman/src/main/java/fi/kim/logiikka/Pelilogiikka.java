@@ -15,6 +15,10 @@ public class Pelilogiikka {
     private Kayttoliittyma kayttoliittyma;
     private Pelaaja pelaaja1;
 
+    /**
+     * Konstruktori luo arpojan, kayttoliittyman ja pelaajan.
+     * @throws Exception 
+     */
     public Pelilogiikka() throws Exception {
         arpoja = new SanaArpoja();
         this.kayttoliittyma = new Kayttoliittyma();
