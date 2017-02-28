@@ -5,6 +5,7 @@ import fi.kim.sanat.SanaArpoja;
 
 /**
  * Pelaaja luokka pitää kirjaa pelaajan sekä osittain sanan tilasta.
+ *
  * @author sepkim
  */
 public class Pelaaja {
@@ -14,10 +15,11 @@ public class Pelaaja {
     private Sana sana;
     private SanaArpoja arpoja;
     String arvatutKirjaimet;
-    
+
     /**
      * Konstruktori alustaa pelaajan tilaa pitävät muuttujat ja luo sanan.
-     * @param arpoja 
+     *
+     * @param arpoja
      */
     public Pelaaja(SanaArpoja arpoja) {
         this.pisteet = 0;
@@ -26,9 +28,10 @@ public class Pelaaja {
         sana = new Sana(arpoja.arvoSana());
         this.arvatutKirjaimet = "";
     }
-    
+
     /**
      * Arvaa kirjain ja muuta sanan boolean taulukkoa jos oikein.
+     *
      * @param kirjain Arvaus.
      * @return onko arvaus oikein
      */
@@ -47,7 +50,17 @@ public class Pelaaja {
         }
         return true;
     }
-    
+
+    public boolean arvaaKokoSana(String arvaus) {
+        if (!arvaus.equals(sana.getSana())) {
+            virheArvauksia++;
+            return false;
+        } else {
+            sana.naytaKokoSana();
+            return true;
+        }
+    }
+
     /**
      * Kutsuu sanan uusiSana metodia.
      */
@@ -63,18 +76,10 @@ public class Pelaaja {
     public int getPisteet() {
         return pisteet;
     }
-    
-//    public void sanaOikein() {
-//        this.pisteet += 2;
-//    }
-//    
-//    public void sanaVaarin() {
-//        this.pisteet -= 1;
-//        uusiSana();
-//    }
-    
+
     /**
      * Hakee sanan string muodossa.
+     *
      * @return Sana string muodossa.
      */
     public String sanaToString() {
@@ -88,8 +93,5 @@ public class Pelaaja {
     public String getArvatutKirjaimet() {
         return arvatutKirjaimet;
     }
-    
-    
-    
-    
+
 }

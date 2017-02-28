@@ -7,3 +7,7 @@
 | 02.02.2017 | 2h | Sananarvaustoteutuksen suunnittelua ja ohjelmointia |
 | 03.02.2017 | 3h | Sananarvaus- sekä sanantulostus ohjelmointi, raportit yms |
 | 10.02.2017 | 5h | Käyttöliittymän alkeita ja javadoc + raportit |
+| 16.02.2017 | 2h | Käyttöliittymää |
+| 21.02.2017 | 2h | Käyttöliittymää ja lisättiin toiminnallisuus puun piirtämiselle |
+| 24.02.2017 | 3h | Testien siivousta, sekvenssikaaviot ja luokkakaavion päivitys, raportit |
+

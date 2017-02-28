@@ -43,5 +43,13 @@ public class PelaajaTest {
         pelaaja.arvaa(kirjain);
         assertEquals(true, pelaaja.getSana().getArvatutKirjaimet()[0]);
     }
+    
+    @Test
+    public void arvaaKokoSanaToimii() {
+        pelaaja.arvaaKokoSana("lol");
+        assertEquals(1, pelaaja.getVirheArvauksia());
+        pelaaja.arvaaKokoSana(pelaaja.sanaToString());
+        assertEquals(true, pelaaja.getSana().kaikkiKirjaimetArvattu());
+    }
 
 }

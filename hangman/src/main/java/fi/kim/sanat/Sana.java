@@ -116,7 +116,11 @@ public class Sana {
         return sana;
     }
     
-    
+    public void naytaKokoSana() {
+        for (int i = 0; i < arvatutKirjaimet.length; i++) {
+            arvatutKirjaimet[i] = true;
+        }
+    }
     
     
 }

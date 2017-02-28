@@ -1,6 +1,6 @@
-**Aihe:** hirsipuu-peli joka toivottavasti saadaan mukautettua toista pelaajaa vastaan pelattavaksi kaksinpeliksi tms. mielenkiintoinen twist.
+**Aihe:** Hirsipuu peli perustoiminnoilla. Ohjelma kykenee lukemaan sanalistan tiedostosta ja arpoa sanan pelaajan arvattavaksi. Pelaajalle on graafinen käyttöliittymä, joka kuvaa pelin tilannetta.
 
-**Hirsipuu kaksinpelinä**: Voisi toimia esim. Tetriksen tapaan, missä pelaajat kilpailevat siitä, kumpi saa ratkottua tietyssä ajassa enemmän sanoja. Liekö verkon yli pelattava moninpeli liian iso pala purtavaksi tälle kurssille?
+**Hirsipuu kaksinpelinä**: Voisi toimia esim. Tetriksen tapaan, missä pelaajat kilpailevat siitä, kumpi saa ratkottua tietyssä ajassa enemmän sanoja.
 
 **Käyttäjät:** Pelaaja. 
 
@@ -8,4 +8,12 @@
 - Menun navigoiminen (kenties pelin sääntöihin liittyviä asetuksia tai AI:n vaikeustason säätelyä).
 - Pelaaminen
 
+**Rakennekuvaus**
+Yksinkertaisuutensa vuoksi ohjelma on helposti ymmärrettävä. Pelaaja luokka pitää kirjaa pelaajan tilasta ja osittain myös sanan tilasta (tämä siksi että mikäli aika riittää ohjelmaan lisätään vielä moninpeli jossa molemmilla pelaajilla on oma sana). Pelilogiikka luokka käynnistää pelin ja luo käyttöliittymän. SanaArpoja lukee sanat.txt tiedostosta sanat ja arpoo niistä tarpeen tullen yhden arvattavaksi. Pelitilaa päivitetään aina kun pelaaja arvaa sanan.
+
+**Käyttöohjeet**
+Suorita ohjelma, kirjoita tekstilaatikkoon arvattava kirjain ja paina Arvaa.
+
 ![Luokkakaavio](kaavio.png)
+![Sekvenssi1](arvosana.png)
+![Sekvenssi1](kaynnistys.png)

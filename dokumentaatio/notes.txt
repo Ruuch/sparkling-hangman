@@ -1,6 +1,6 @@
 luokkakaavio ->
 
-http://yuml.me/edit/9dc77906
+http://yuml.me/edit/83016ff8
 
 
 

@@ -59,6 +59,20 @@ public class SanaTest {
         assertEquals(false, sana.vinkkiKayttamatta());
     }
     
+    @Test
+    public void kaikkiKirjaimetArvattuToimii() {
+        sana.arvaa('M');
+        sana.arvaa('o');
+        sana.arvaa('i');
+        assertEquals(true, sana.kaikkiKirjaimetArvattu());
+    }
+    
+    @Test
+    public void naytaKokoSanaToimii() {
+        sana.naytaKokoSana();
+        assertEquals(true, sana.kaikkiKirjaimetArvattu());
+    }
+    
     
 
 }
