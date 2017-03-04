@@ -1,6 +1,6 @@
 # SPARKLING-hangman
 
-Kaksinpeli hirsipuu mahtavilla ominaisuuksilla.
+Yksinpeli hirsipuu mahtavilla ominaisuuksilla.
 
 ## Dokumentaatio
 
@@ -10,4 +10,4 @@ Kaksinpeli hirsipuu mahtavilla ominaisuuksilla.
 
 [Checkstyle](https://htmlpreview.github.io/?https://github.com/Ruuch/sparkling-hangman/blob/master/dokumentaatio/checkstyle/site/checkstyle.html)
 
-[PIT](https://htmlpreview.github.io/?https://github.com/Ruuch/sparkling-hangman/blob/master/dokumentaatio/pit/201702102157/index.html)
+[PIT](https://htmlpreview.github.io/?https://github.com/Ruuch/sparkling-hangman/blob/master/dokumentaatio/pit/201703041135/index.html)
