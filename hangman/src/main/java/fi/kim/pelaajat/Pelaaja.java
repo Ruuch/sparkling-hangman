@@ -19,7 +19,7 @@ public class Pelaaja {
     /**
      * Konstruktori alustaa pelaajan tilaa pitävät muuttujat ja luo sanan.
      *
-     * @param arpoja
+     * @param arpoja SanaArpoja olio, jolla arvotaan sana.
      */
     public Pelaaja(SanaArpoja arpoja) {
         this.pisteet = 0;
@@ -51,6 +51,11 @@ public class Pelaaja {
         return true;
     }
 
+    /**
+     * Arvaa koko sanan kerralla.
+     * @param arvaus Pelaajan arvaus.
+     * @return palauttaa true, jos arvaus oli oikein.
+     */
     public boolean arvaaKokoSana(String arvaus) {
         if (!arvaus.equals(sana.getSana())) {
             virheArvauksia++;

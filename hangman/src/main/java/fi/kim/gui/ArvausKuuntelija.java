@@ -37,6 +37,11 @@ public class ArvausKuuntelija implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (!arvaus.getText().isEmpty()) {
             if (arvaus.getText().length() == 1) {
+                char arvattuKirjain = arvaus.getText().toCharArray()[0];
+                if (pelaaja.getArvatutKirjaimet().contains(String.valueOf(arvattuKirjain))) {
+                    return;
+                }
+                
                 if (pelaaja.arvaa(arvaus.getText().toCharArray()[0])) {
                     sana.setText(pelaaja.getSana().sanaPiilotetuillaKirjaimilla());
                 } else {

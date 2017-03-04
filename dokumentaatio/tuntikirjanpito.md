@@ -10,4 +10,6 @@
 | 16.02.2017 | 2h | Käyttöliittymää |
 | 21.02.2017 | 2h | Käyttöliittymää ja lisättiin toiminnallisuus puun piirtämiselle |
 | 24.02.2017 | 3h | Testien siivousta, sekvenssikaaviot ja luokkakaavion päivitys, raportit |
+| 27.02.2017 | 2h | Logiikan viimeistely ja raportteja |
+| 04.02.2017 | 1h | Testit kuntoon, ja muut loppusäädöt |
 

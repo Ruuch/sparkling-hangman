@@ -14,7 +14,7 @@ public class SanaArpoja {
 
     private Scanner lukija;
     private ArrayList<String> sanat;
-    private String[] sanoja = {"moi", "hei", "auto", "vene", "jättiläinen", "mursu", "jazz"};
+    private String[] sanoja = {"joukko", "jousi", "puuvene", "moi", "hei", "auto", "vene", "jättiläinen", "mursu", "jazz"};
 
     /**
      * Avaa tiedoston ja lukee sanat listaan.

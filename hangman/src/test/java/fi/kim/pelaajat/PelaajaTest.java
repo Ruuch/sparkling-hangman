@@ -40,8 +40,10 @@ public class PelaajaTest {
     @Test
     public void arvaaminenToimii() {
         char kirjain = pelaaja.sanaToString().charAt(0);
-        pelaaja.arvaa(kirjain);
+        boolean oikein = pelaaja.arvaa(kirjain);
         assertEquals(true, pelaaja.getSana().getArvatutKirjaimet()[0]);
+        assertEquals(true, oikein);
+        assertEquals(false, pelaaja.arvaa('x'));
     }
     
     @Test

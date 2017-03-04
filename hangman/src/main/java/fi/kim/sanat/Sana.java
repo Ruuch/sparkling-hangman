@@ -116,6 +116,9 @@ public class Sana {
         return sana;
     }
     
+    /**
+     * Asettaa kaikki kirjaimet näkyviksi.
+     */
     public void naytaKokoSana() {
         for (int i = 0; i < arvatutKirjaimet.length; i++) {
             arvatutKirjaimet[i] = true;
